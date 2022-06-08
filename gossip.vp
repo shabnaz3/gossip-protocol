@@ -41,8 +41,8 @@ principal Marbela[
 
 knows private v 
 generates uuid,sub,realm,pass, omi
-haa = HASH(uuid,sub,realm,pass)
-em1 = AEAD_ENC(v,haa,nil)
+token = HASH(uuid,sub,realm,pass)
+em1 = AEAD_ENC(v,token,nil)
 goa =go^a
 em0 = AEAD_ENC(goa,omi,em1)
 ]
